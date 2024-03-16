@@ -17,24 +17,23 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"czh1106.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="v2ray使用简介官网：https:&#x2F;&#x2F;www.v2ray.comv2Ray（Project V）相对于Shadowsocks,支持更多协议 (Socks、HTTP、TLS、TCP、mKCP、WebSocket)，还有更为强大的路由功能，更像是个全能选手 服务器(VPS)购买这里我采用的是HostWinds，之前有选择购买搬瓦工，但是IP更换没有hostWinds方便，地址：https:&#x2F;&#x2F;cli">
+  <meta name="description" content="2022已读书单 技术 《MySQL是怎样运行的》小孩子 4919  文学 《闪闪发光的人生》 [日]小川糸 《山茶文具店》[日] 小川糸 《人生十讲》 季羡林  理财 《小狗钱钱》[德]博多·舍费尔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="v2ray">
-<meta property="og:url" content="http://example.com/2022/11/14/v2Ray/index.html">
+<meta property="og:title" content="My Book">
+<meta property="og:url" content="https://czh1106.github.io/myBook/index.html">
 <meta property="og:site_name" content="耳东华的分享">
-<meta property="og:description" content="v2ray使用简介官网：https:&#x2F;&#x2F;www.v2ray.comv2Ray（Project V）相对于Shadowsocks,支持更多协议 (Socks、HTTP、TLS、TCP、mKCP、WebSocket)，还有更为强大的路由功能，更像是个全能选手 服务器(VPS)购买这里我采用的是HostWinds，之前有选择购买搬瓦工，但是IP更换没有hostWinds方便，地址：https:&#x2F;&#x2F;cli">
+<meta property="og:description" content="2022已读书单 技术 《MySQL是怎样运行的》小孩子 4919  文学 《闪闪发光的人生》 [日]小川糸 《山茶文具店》[日] 小川糸 《人生十讲》 季羡林  理财 《小狗钱钱》[德]博多·舍费尔">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-14T03:36:05.000Z">
-<meta property="article:modified_time" content="2022-11-19T09:12:27.057Z">
-<meta property="article:author" content="chen">
-<meta property="article:tag" content="bridge">
-<meta property="article:tag" content="梯子">
+<meta property="article:published_time" content="2022-11-09T07:40:23.000Z">
+<meta property="article:modified_time" content="2023-02-19T07:58:58.038Z">
+<meta property="article:author" content="耳东华">
+<meta property="article:tag" content="2022">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/11/14/v2Ray/">
+<link rel="canonical" href="https://czh1106.github.io/myBook/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>v2ray | 耳东华的分享</title>
+  <title>My Book | 耳东华的分享</title>
   
 
 
@@ -105,6 +104,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -129,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -143,6 +170,7 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -157,11 +185,11 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/14/v2Ray/">
+    <link itemprop="mainEntityOfPage" href="https://czh1106.github.io/myBook/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="chen">
+      <meta itemprop="name" content="耳东华">
       <meta itemprop="description" content="个人的生活感悟">
     </span>
 
@@ -170,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          v2ray
+          My Book
         </h1>
 
         <div class="post-meta">
@@ -180,14 +208,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-11-14 11:36:05" itemprop="dateCreated datePublished" datetime="2022-11-14T11:36:05+08:00">2022-11-14</time>
+              <time title="创建时间：2022-11-09 15:40:23" itemprop="dateCreated datePublished" datetime="2022-11-09T15:40:23+08:00">2022-11-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-19 17:12:27" itemprop="dateModified" datetime="2022-11-19T17:12:27+08:00">2022-11-19</time>
+                <time title="修改时间：2023-02-19 15:58:58" itemprop="dateModified" datetime="2023-02-19T15:58:58+08:00">2023-02-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -195,7 +223,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/v2Ray/" itemprop="url" rel="index"><span itemprop="name">v2Ray</span></a>
+                  <a href="/categories/%E8%AF%BB%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">读书</span></a>
                 </span>
             </span>
 
@@ -215,8 +243,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/11/14/v2Ray/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/11/14/v2Ray/" itemprop="commentCount"></span>
+    <a title="valine" href="/myBook/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/myBook/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -226,7 +254,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>387</span>
+              <span>218</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -245,16 +273,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="v2ray使用"><a href="#v2ray使用" class="headerlink" title="v2ray使用"></a>v2ray使用</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>官网：<a target="_blank" rel="noopener" href="https://www.v2ray.com/">https://www.v2ray.com</a><br>v2Ray（Project V）相对于Shadowsocks,支持更多协议 (Socks、HTTP、TLS、TCP、mKCP、WebSocket)，还有更为强大的路由功能，更像是个全能选手</p>
-<h4 id="服务器-VPS-购买"><a href="#服务器-VPS-购买" class="headerlink" title="服务器(VPS)购买"></a>服务器(VPS)购买</h4><p>这里我采用的是HostWinds，之前有选择购买搬瓦工，但是IP更换没有hostWinds方便，地址：<a target="_blank" rel="noopener" href="https://clients.hostwinds.com/">https://clients.hostwinds.com/</a></p>
-<p>当然，搬瓦工官方也出了自己搭建的v2Ray <a target="_blank" rel="noopener" href="https://bwgjms.com/post/how-to-buy-justmysocks/">Just My Socks</a></p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>输入下面的命令，然后按步骤操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/v2ray.sh)</span><br></pre></td></tr></table></figure>
+        <h3 id="2022已读书单"><a href="#2022已读书单" class="headerlink" title="2022已读书单"></a>2022已读书单</h3><h4 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《MySQL是怎样运行的》小孩子 4919<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="文学"><a href="#文学" class="headerlink" title="文学"></a>文学</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《闪闪发光的人生》 [日]小川糸
+《山茶文具店》[日] 小川糸
+《人生十讲》 季羡林<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="理财"><a href="#理财" class="headerlink" title="理财"></a>理财</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《小狗钱钱》[德]博多·舍费尔<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
-<p>安装完成后，可以输入: v2Ray url 查看客户端需要配置的链接</p>
-<h4 id="BBR优化"><a href="#BBR优化" class="headerlink" title="BBR优化"></a>BBR优化</h4><h4 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h4><p>当前使用的配置来自于：<a target="_blank" rel="noopener" href="https://github.com/233boy/v2ray">https://github.com/233boy/v2ray</a></p>
+<h4 id="地理"><a href="#地理" class="headerlink" title="地理"></a>地理</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《这里是中国》星球研究所
+《这里是中国2》星球研究所<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="心理"><a href="#心理" class="headerlink" title="心理"></a>心理</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《被讨厌的勇气》岸见一郎<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<h4 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《古代人的日常生活》讲历史的王老师<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《如何阅读一本书》[美] 莫提默·J. 艾德勒 &#x2F; 查尔斯·范多伦<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《癌症·真相》菠萝<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><pre class="line-numbers language-book" data-language="book"><code class="language-book">《凡人修仙传》忘语
+《躺平》[德] 贝恩德·布伦纳<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><div><h1>猜你喜欢<span style="font-size:0.45em; color:gray"></span></h1><ul><li><a target="_blank" rel="noopener" href="http://czh06.tk/myBook/">My Book</a></li></ul></div>
     </div>
 
     
@@ -263,8 +301,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/bridge/" rel="tag"># bridge</a>
-              <a href="/tags/%E6%A2%AF%E5%AD%90/" rel="tag"># 梯子</a>
+              <a href="/tags/2022/" rel="tag"># 2022</a>
           </div>
 
         
@@ -272,13 +309,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/11/09/myBook/" rel="prev" title="My Book">
-      <i class="fa fa-chevron-left"></i> My Book
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/11/20/My-Blog-Journey/" rel="next" title="My Blog Journey">
-      My Blog Journey <i class="fa fa-chevron-right"></i>
+    <a href="/v2Ray/" rel="next" title="v2ray">
+      v2ray <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -339,13 +373,13 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#v2ray%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">v2ray使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8-VPS-%E8%B4%AD%E4%B9%B0"><span class="nav-number">1.2.</span> <span class="nav-text">服务器(VPS)购买</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BBR%E4%BC%98%E5%8C%96"><span class="nav-number">1.4.</span> <span class="nav-text">BBR优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%87%E6%B3%A8"><span class="nav-number">1.5.</span> <span class="nav-text">备注</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2022%E5%B7%B2%E8%AF%BB%E4%B9%A6%E5%8D%95"><span class="nav-number">1.</span> <span class="nav-text">2022已读书单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF"><span class="nav-number">1.1.</span> <span class="nav-text">技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E5%AD%A6"><span class="nav-number">1.2.</span> <span class="nav-text">文学</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%B4%A2"><span class="nav-number">1.3.</span> <span class="nav-text">理财</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%B0%E7%90%86"><span class="nav-number">1.4.</span> <span class="nav-text">地理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%83%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">心理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2"><span class="nav-number">1.6.</span> <span class="nav-text">历史</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">1.7.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%81%A5%E5%BA%B7"><span class="nav-number">1.8.</span> <span class="nav-text">健康</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">1.9.</span> <span class="nav-text">其他</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">猜你喜欢</span></a></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">chen</p>
+  <p class="site-author-name" itemprop="name">耳东华</p>
   <div class="site-description" itemprop="description">个人的生活感悟</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -353,18 +387,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -391,23 +425,25 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">chen</span>
+  <span class="author" itemprop="copyrightHolder">耳东华</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2k</span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 编辑
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 编辑
   </div>
 
 
@@ -416,7 +452,7 @@
 <script>
     var now = new Date(); 
     function createtime() { 
-        var grt= new Date("09/11/2022 00:00:00");//在此处修改你的建站时间
+        var grt= new Date("2022/11/09 23:00:00"); //在此处修改你的建站时间
         now.setTime(now.getTime()+250); 
         days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
@@ -424,7 +460,7 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+        document.getElementById("timeDate").innerHTML = "已充电 "+dnum+" 天 "; 
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
     } 
 setInterval("createtime()",250);
@@ -474,7 +510,7 @@ setInterval("createtime()",250);
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -485,6 +521,10 @@ setInterval("createtime()",250);
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
@@ -517,7 +557,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       notify     : false,
       appId      : 'W0EsoBJW8jNvV27BRhZ220O5-gzGzoHsz',
       appKey     : 'appKVGWTIO3mJuEZF2uOjkCk',
-      placeholder: "Just go go",
+      placeholder: "请留下你宝贵的箴言",
       avatar     : 'mm',
       meta       : guest,
       pageSize   : '10' || 10,

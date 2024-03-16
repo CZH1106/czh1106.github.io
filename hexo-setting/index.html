@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"czh1106.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="上一篇已经描述过了博客的技术选型，接下来就让我们来具体详解一下hexo的搭建之旅吧！  主题选择 hexo支持丰富的主体插件选择，具体可以参考这里,也可以在GitHub上寻找相关主题(搜索hexo-t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo setting">
+<meta property="og:url" content="https://czh1106.github.io/hexo-setting/index.html">
+<meta property="og:site_name" content="耳东华的分享">
+<meta property="og:description" content="上一篇已经描述过了博客的技术选型，接下来就让我们来具体详解一下hexo的搭建之旅吧！  主题选择 hexo支持丰富的主体插件选择，具体可以参考这里,也可以在GitHub上寻找相关主题(搜索hexo-t">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://czh1106.github.io/img/hexo/b58881c0039f94ad26162a407723f701.png">
+<meta property="og:image" content="https://czh1106.github.io/img/hexo/C6E72794-EED6-4E70-955E-D542DE228C7E.png">
+<meta property="og:image" content="https://czh1106.github.io/img/hexo/20221214153329.jpg">
+<meta property="article:published_time" content="2022-11-20T08:30:01.000Z">
+<meta property="article:modified_time" content="2022-12-25T02:38:42.020Z">
+<meta property="article:author" content="耳东华">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://czh1106.github.io/img/hexo/b58881c0039f94ad26162a407723f701.png">
+
+<link rel="canonical" href="https://czh1106.github.io/hexo-setting/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo setting | 耳东华的分享</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">耳东华的分享</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://czh1106.github.io/hexo-setting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="耳东华">
+      <meta itemprop="description" content="个人的生活感悟">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="耳东华的分享">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo setting
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-11-20 16:30:01" itemprop="dateCreated datePublished" datetime="2022-11-20T16:30:01+08:00">2022-11-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-12-25 10:38:42" itemprop="dateModified" datetime="2022-12-25T10:38:42+08:00">2022-12-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA/" itemprop="url" rel="index"><span itemprop="name">个人</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/hexo-setting/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/hexo-setting/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>上一篇已经描述过了博客的技术选型，接下来就让我们来具体详解一下hexo的搭建之旅吧！</p>
+<h4 id="主题选择"><a href="#主题选择" class="headerlink" title="主题选择"></a>主题选择</h4><p>hexo支持丰富的主体插件选择，具体可以参考<a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">这里</a>,也可以在GitHub上寻找相关主题(搜索hexo-theme)，这里我采用的是<a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/">Next</a>主题,github地址为<code>https://github.com/iissnan/hexo-theme-next/</code>，这个主题的受欢迎程度也是很高的，相较而言更简洁，当然也可以做自己的主题，不过这都是后话了，现在遵循拿来即用的原则。</p>
+<h4 id="开放评论"><a href="#开放评论" class="headerlink" title="开放评论"></a>开放评论</h4><p>这里主要还是基于第三方的评论系统，目前Next主题支持的有：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://disqus.com/">disqus</a></p>
+<blockquote>
+<p>目前是很好用的一个评论系统，但是由于是墙外的应用，对于国内常规用户来说还是不太友好，暂时忍痛割爱了,不过可以看下效果图<br>  <img src="/../img/hexo/b58881c0039f94ad26162a407723f701.png"></p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://changyan.kuaizhan.com/">changyan</a></p>
+<blockquote>
+<p>这是一个国内的平台,不知道为何，现在国内的好多应用都需要关注公众号，so不是太喜欢，贴个效果图感受一下<br>  <img src="/../img/hexo/C6E72794-EED6-4E70-955E-D542DE228C7E.png"></p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.leancloud.cn/">valine</a></p>
+<blockquote>
+<p>valine是基于leanCloud的无后端评论系统，所以：</p>
+</blockquote>
+  <pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">注册LeanCode账号
+创建Valine应用
+进入应用，点击设置>应用Keys获取appId,appKey
+在主题配置文件_config.yml,这里的路径是next/_config.yml中找到valine然后配置上即可<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>优化<ul>
+<li>主要是优化valine在博客中的一些样式，比如去处掉Powered By，文本等，具体可以在主题的css目录下创建一个comment文件夹，放自己的自定义的样式，我这里是next&#x2F;source&#x2F;css&#x2F;_common下创建comment文件夹，再创建comment.styl样式文件，里面写优化的样式，写完之后要在main.styl引入才可生效</li>
+<li>可以在主题中开启评论邮箱通知，自定义placeholder等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>gitalk<br>  首先要注册GitHub应用，<a target="_blank" rel="noopener" href="https://github.com/settings/applications/new">https://github.com/settings/applications/new</a><br>  注册完成之后，把Client ID和Client secrets填写到主题的_config.yml里面，gittalk对应的位置，开启即可</p>
+  <pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">gitalk:
+    enable: true  #启用gitalk
+    github_id:   #github帐号 例：CodeHaotian
+    id: location.pathname  #此设置参照下文常见问题说明
+    repo:   #存放评论的仓库名称
+    client_id:   #application的id，即上文Client ID
+    client_secret:  #application的密码，即上文Client Secret
+    admin_user:  #页面显示联系**初始化评论 例：CodeHaotian
+    distraction_free_mode: true # Facebook-like distraction free mode
+    # Gitalk's display language depends on user's browser or system environment
+    # If you want everyone visiting your site to see a uniform language, you can set a force language value
+    # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
+    language: zh-CN<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p><a target="_blank" rel="noopener" href="https://livere.com/introduce">livere</a></p>
+<blockquote>
+<p>来必力，一家韩国的评论系统，这里不多做阐述了，感兴趣的大家可以去看看，不过不是太推荐</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://widgetpack.com/">rating</a></p>
+</li>
+</ul>
+<h4 id="统计字数"><a href="#统计字数" class="headerlink" title="统计字数"></a>统计字数</h4><p>使用hexo-word-counter统计文章的字数以及预期阅读时间。完成配置后，可以在每篇文章开头和页面底部显示字数和阅读时间</p>
+<ul>
+<li>安装</li>
+</ul>
+<pre class="line-numbers language-bin" data-language="bin"><code class="language-bin">$ npm install hexo-word-counter
+$ hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>配置<br>在主配置文件_config.yml尾部添加</li>
+</ul>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+  awl: 4  # 平均字节长度，默认为4，cn≈2，en≈5，
+  wpm: 275 # 每分钟阅读次数，默认为275，Slow≈200，Normal≈275，Fast≈350
+  suffix: &quot;mins.&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="站点运行时间"><a href="#站点运行时间" class="headerlink" title="站点运行时间"></a>站点运行时间</h4><p>打开<code>\themes\next\layout\_partial\footer.swig</code>,在最后位置添加一串js代码</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"timeDate"</span><span class="token operator">></span>载入天数<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"times"</span><span class="token operator">></span>载入时分秒<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token keyword">var</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">function</span> <span class="token function">createtime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> 
+        <span class="token keyword">var</span> grt<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">"2020/11/09 00:00:00"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在此处修改你的建站时间</span>
+        now<span class="token punctuation">.</span><span class="token function">setTime</span><span class="token punctuation">(</span>now<span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">250</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        days <span class="token operator">=</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> grt <span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span> <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">/</span> <span class="token number">24</span><span class="token punctuation">;</span> dnum <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>days<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        hours <span class="token operator">=</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> grt <span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span> <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">/</span> <span class="token number">60</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token number">24</span> <span class="token operator">*</span> dnum<span class="token punctuation">)</span><span class="token punctuation">;</span> hnum <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>hours<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>hnum<span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">==</span><span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>hnum <span class="token operator">=</span> <span class="token string">"0"</span> <span class="token operator">+</span> hnum<span class="token punctuation">;</span><span class="token punctuation">&#125;</span> minutes <span class="token operator">=</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> grt <span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span> <span class="token operator">/</span><span class="token number">60</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> dnum<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> hnum<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        mnum <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>minutes<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>mnum<span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">==</span><span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>mnum <span class="token operator">=</span> <span class="token string">"0"</span> <span class="token operator">+</span> mnum<span class="token punctuation">;</span><span class="token punctuation">&#125;</span> 
+        seconds <span class="token operator">=</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> grt <span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> dnum<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> hnum<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> mnum<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        snum <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>seconds<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>snum<span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">==</span><span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>snum <span class="token operator">=</span> <span class="token string">"0"</span> <span class="token operator">+</span> snum<span class="token punctuation">;</span><span class="token punctuation">&#125;</span> 
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"timeDate"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"已运行 "</span><span class="token operator">+</span>dnum<span class="token operator">+</span><span class="token string">" 天 "</span><span class="token punctuation">;</span> 
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"times"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> hnum <span class="token operator">+</span> <span class="token string">" 小时 "</span> <span class="token operator">+</span> mnum <span class="token operator">+</span> <span class="token string">" 分 "</span> <span class="token operator">+</span> snum <span class="token operator">+</span> <span class="token string">" 秒"</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">&#125;</span> 
+<span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token string">"createtime()"</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="总访问人数"><a href="#总访问人数" class="headerlink" title="总访问人数"></a>总访问人数</h4><p>Next主题默认支持,修改&#x2F;theme&#x2F;next&#x2F;_config.yml中的busuanzi_count，改为true即可.<code>这个只是很普通的显示总站的访问量和人数</code></p>
+<h4 id="推荐文章"><a href="#推荐文章" class="headerlink" title="推荐文章"></a>推荐文章</h4><p>这里使用的是第三方的一款插件，具体预览效果可以看：<br><img src="/../img/hexo/20221214153329.jpg" alt="recommend"></p>
+<ul>
+<li>安装插件<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-recommended-posts --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>下载推荐文章列表<br>在编辑完新的文章之后，使用如下命令获取推荐列表<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo recommend<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>自定义<br>如果默认配置不满足需求，可以在hexo的根目录<code>_config.yml</code>里添加配置：<pre class="line-numbers language-json" data-language="json"><code class="language-json">recommended_posts:
+  server: https:&#x2F;&#x2F;api.truelaurel.com #后端推荐服务器地址
+  timeoutInMillis: 10000 #服务时长，超过此时长，则使用离线推荐模式
+  internalLinks: 2 #内部文章数量
+  externalLinks: 1 #外部文章数量
+  fixedNumber: false
+  autoDisplay: true #自动在文章底部显示推荐文章
+  excludePattern: []
+  titleHtml: &lt;h1&gt;猜你喜欢&lt;span style&#x3D;&quot;font-size:0.45em; color:gray&quot;&gt;（由&lt;a href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;huiwang&#x2F;hexo-recommended-posts&quot;&gt;hexo文章推荐插件&lt;&#x2F;a&gt;驱动）&lt;&#x2F;span&gt;&lt;&#x2F;h1&gt; #自定义标题<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+其中 <code>excludePattern</code> 可以添加想要被过滤的链接的正则表达式, 如配置为 <code>[&quot;example.com&quot;]</code>, 则所有包含 <code>example.com</code> 的链接都会从推荐文章中过滤掉.</li>
+</ul>
+<p><code>fixedNumber</code> 字段用来控制是否返回固定数量的推荐文章, 如果默认推荐文章不够的话会填充当前文章的前后文章作为推荐文章.</p>
+<h4 id="阅读进度"><a href="#阅读进度" class="headerlink" title="阅读进度"></a>阅读进度</h4><p>找到next主题的<code>_config.yml</code>找到<code>reading_progress</code>,把false改为true即可，默认是支持的</p>
+<h4 id="文章简介"><a href="#文章简介" class="headerlink" title="文章简介"></a>文章简介</h4><p>目前hexo不再支持老的auto_excerpt，所以现在我们引入新的插件</p>
+<ul>
+<li>hexo-excerpt<ul>
+<li>安装  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-excerpt --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+  打开hexo根目录的<code>_config.yml</code>添加如下配置  <pre class="line-numbers language-json" data-language="json"><code class="language-json">excerpt:
+    depth: 2  #按层来算，也就是按代码块来算
+    excerpt_excludes: []
+    more_excludes: []
+    hideWholePostExcerpts: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  打开主题的配置文件<code>/theme/next/_config.yml</code>,将<code>excerpt_description</code>设置为<code>true</code>,<code>read_more_btn</code>设置为<code>true</code><br>  注：按代码块的显示可能有些不太友好，所以下面我们引入第二个插件</li>
+</ul>
+</li>
+<li>hexo-auto-excerpt<ul>
+<li>安装  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install hexo-auto-excerpt --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+  安装完成后在hexo的根目录<code>_config.yml</code>下添加<code>excerpt_length: 100</code>即可，表示摘要的字数<br>  注：这个会把文本块打乱，只是以文字显示在首页</li>
+</ul>
+</li>
+</ul>
+<h4 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h4><p>待定</p>
+<h4 id="域名设置"><a href="#域名设置" class="headerlink" title="域名设置"></a>域名设置</h4><p>域名可以在<a target="_blank" rel="noopener" href="http://www.freenom.com/">freenom.com</a>上面注册一个免费的<code>前提需要有梯子</code>,然后可以搜索自己的想要的域名，最高可以免费12个月哦，添加完之后有个配置forward url可以设置自己的GitHub page域名，这样访问注册的域名就可以跳转到GitHub page访问博客了。</p>
+<h4 id="SEO搜索"><a href="#SEO搜索" class="headerlink" title="SEO搜索"></a>SEO搜索</h4><ul>
+<li>Google Search<br>登录<a target="_blank" rel="noopener" href="https://developers.google.com/search">谷歌站点</a>，添加自己的站点域名，然后选择TXT验证，完毕之后，添加个人站点地图</li>
+</ul>
+<div><h1>猜你喜欢<span style="font-size:0.45em; color:gray"></span></h1><ul><li><a target="_blank" rel="noopener" href="http://czh06.tk/hexo-setting/">hexo setting</a></li></ul></div>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/My-Blog-Journey/" rel="prev" title="My Blog Journey">
+      <i class="fa fa-chevron-left"></i> My Blog Journey
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023Book/" rel="next" title="2023Book">
+      2023Book <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%BB%E9%A2%98%E9%80%89%E6%8B%A9"><span class="nav-number">1.</span> <span class="nav-text">主题选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E6%94%BE%E8%AF%84%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">开放评论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%AD%97%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">统计字数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%99%E7%82%B9%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4"><span class="nav-number">4.</span> <span class="nav-text">站点运行时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E8%AE%BF%E9%97%AE%E4%BA%BA%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">总访问人数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E6%96%87%E7%AB%A0"><span class="nav-number">6.</span> <span class="nav-text">推荐文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6"><span class="nav-number">7.</span> <span class="nav-text">阅读进度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%AE%80%E4%BB%8B"><span class="nav-number">8.</span> <span class="nav-text">文章简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">9.</span> <span class="nav-text">性能优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE"><span class="nav-number">10.</span> <span class="nav-text">域名设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SEO%E6%90%9C%E7%B4%A2"><span class="nav-number">11.</span> <span class="nav-text">SEO搜索</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">猜你喜欢</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">耳东华</p>
+  <div class="site-description" itemprop="description">个人的生活感悟</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">耳东华</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">7k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11 分钟</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 编辑
+  </div>
+
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("2022/11/09 23:00:00"); //在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "已充电 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'W0EsoBJW8jNvV27BRhZ220O5-gzGzoHsz',
+      appKey     : 'appKVGWTIO3mJuEZF2uOjkCk',
+      placeholder: "请留下你宝贵的箴言",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-CN' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
